@@ -1,17 +1,29 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from "react";
+import ReactDOM from "react-dom";
 import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+// IMPORT ROUTER
+import { BrowserRouter as Router, Route , Routes} from "react-router-dom";
+import App from "./App";
+import { Provider } from "react-redux";
+import { createStore, applyMiddleware, compose } from "redux";
+import thunk from "redux-thunk";
+// import { reducers } from "./reducers";
+// Import Milligram for Some Default Styling
+// import "milligram";
+
+// const store = createStore(reducers, compose(applyMiddleware(thunk)));
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  // Wrap our App Component inside router so App and children can use router
+  // Pass the app component into Route to give it access to router props
+  <Router>
+    <React.StrictMode>
+      <Routes>
+        {/* <Provider store={store}> */}
+          <Route path="*" element={<App />} />
+         {/* </Provider> */}
+      </Routes>
+    </React.StrictMode>
+  </Router>,
   document.getElementById('root')
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
