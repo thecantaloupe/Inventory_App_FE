@@ -1,3 +1,17 @@
+# Assisted Sources
+Hamburger menu: https://canta-pfwarehouse.herokuapp.com/warehouses
+
+Backend JWT/Auth: https://tuts.alexmercedcoder.com/2020/ruby-tut/
+
+Future:
+
+2FA via https://keygen.sh/blog/how-to-implement-totp-2fa-in-rails-using-rotp/
+https://github.com/mdp/rotp/
+
+Query Params:
+https://reactrouter.com/docs/en/v6/getting-started/tutorial
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

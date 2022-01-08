@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import "./styles.css"
@@ -5,6 +6,8 @@ import { deleteWarehouse, getWarehouse } from "../../actions/Warehouse";
 
 export default function Warehouse() {
   const warehouses = useSelector((state) => state.warehouses)
+  const [user, setUser] = useState(JSON.parse(localStorage.getItem('profile')));
+
   console.log(warehouses)
   let navigate = useNavigate();
   const dispatch = useDispatch();
@@ -24,6 +27,7 @@ export default function Warehouse() {
       <h5>Inventory Levels</h5>
       {inv.map((invs) =>(
       <p key={invs.id}>Inventory Item Id number: {invs.id} | Count: {invs.count}</p>))}
+      {user && (
       <button
             onClick={() =>
               dispatch(deleteWarehouse(warehouse.id), dispatch(getWarehouse()), navigate("/warehouses"))
@@ -32,6 +36,7 @@ export default function Warehouse() {
           >
             DELETE
           </button>
+            )}
     </main>
   );
 }
