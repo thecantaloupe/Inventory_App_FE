@@ -42,8 +42,8 @@ const Link = styled(NavLink)`
 export function NavLinks(props, {to}) {
     return <NavLinksContainer>
         <LinksWrapper>
-        <LinkItem><Link to={"/"}>About</Link></LinkItem>
-        <LinkItem><Link to={"/"}>Warehouses</Link></LinkItem>
+        <LinkItem><Link to={"about"}>About</Link></LinkItem>
+        <LinkItem><Link to={"warehouses"}>Warehouses</Link></LinkItem>
         <LinkItem><Link to={"/"}>Inventory List</Link></LinkItem>
         <LinkItem><Link to={"/"}>Pictures</Link></LinkItem>
         </LinksWrapper>

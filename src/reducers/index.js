@@ -2,6 +2,6 @@ import { combineReducers } from "redux";
 
 import auth from './auth';
 import local from './localhost';
-import pfwarehouse from "./pfwarehouse";
+import warehouses from "./warehouse";
 
-export const reducers = combineReducers({ auth , local, pfwarehouse });
+export const reducers = combineReducers({ auth , local, warehouses });

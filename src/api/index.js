@@ -13,9 +13,9 @@ API.interceptors.request.use((req) => {
     return req;
 })
 
-export const fetchWarehouse= () => API.get('./warehouse')
-export const createWarehouse= (newForm) => API.post('./warehouse', newForm)
-export const updateAWarehouse= (id, updatedForm) => API.put(`./warehouse/${id}`, updatedForm)
-export const deleteWarehouse = (id) => API.delete(`./warehouse/${id}`)
+export const fetchWarehouse= () => API.get('./warehouses')
+export const createWarehouse= (newForm) => API.post('./warehouses', newForm)
+export const updateWarehouse= (id, updatedForm) => API.put(`./warehouses/${id}`, updatedForm)
+export const deleteWarehouse = (id) => API.delete(`./warehouses/${id}`)
 export const login = (FormData) => API.post('./users/login',FormData)
 export const signup = (FormData) => API.post('./users/signup',FormData)

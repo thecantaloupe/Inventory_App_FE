@@ -61,17 +61,8 @@ const LoginButton = styled.button`
 
 export function Accessibility(props) {
   let user = props.user
-  const logout = () => {
-    // dispatch({type: 'LOGOUT'});
-    // history.push('/');
-    // setUser(null);
-    console.log("logged out")
-    user = false
-  }
-  const login = () => {
-    console.log("logged in")
-    user = true
-  }
+  const logout = props.logout
+
 
     return (
     <AccessibilityContainer>
@@ -80,7 +71,7 @@ export function Accessibility(props) {
         </>
         ) : (<>
           <Link to='/auth'>
-            <LoginButton onClick={login}>Login</LoginButton>
+            <LoginButton>Login</LoginButton>
           </Link>
         </>
         )}

@@ -10,9 +10,10 @@ import thunk from "redux-thunk";
 import { reducers } from "./reducers";
 // Import Milligram for Some Default Styling
 import "milligram";
-import Warehouses from "./components/Warehouse/Warehouse";
+import Warehouses from "./components/Warehouse/Warehouses";
+import Warehouse from "./components/Warehouse/Warehouse";
 import Auth from "./components/Auth/Auth";
-
+import Form from "./components/Form/Form";
 const store = createStore(reducers, compose(applyMiddleware(thunk)));
 
 ReactDOM.render(
@@ -24,7 +25,7 @@ ReactDOM.render(
         <Routes>
           <Route path="*" element={<App />} >
             <Route path="auth" element={<Auth /> } />
-            <Route path="warehouses" element={<Warehouses/>}>
+            <Route path="warehouses/" element={<Warehouses/>}>
               <Route
                 index
                 element={
@@ -32,6 +33,16 @@ ReactDOM.render(
                     <p>Select an warehouse</p>
                   </main>
                 }
+                />
+                <Route path="new" element={<Form />} />
+                <Route path=":warehouseId/*" element={<Warehouse />} />
+                <Route
+                  path="*"
+                  element={
+                    <main style={{ padding: "1rem" }}>
+                      <p>There's nothing here!</p>
+                    </main>
+                  }
                 />
             </Route>
           </Route>
