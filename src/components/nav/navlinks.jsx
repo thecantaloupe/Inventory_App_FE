@@ -14,17 +14,24 @@ const LinksWrapper = styled.ul`
     padding: 0;
     display: flex;
     height: 100%;
+    list-style: none;
 `;
 
 const LinkItem = styled.li`
-    height: 100px;
-    padding: 0 1.1em;
-    color: #222;
-    font-weight: 500;
-    font-size: 14px;
-    font-size: center;
-    justify-content: center;
-`
+  height: 100%;
+  padding: 0 1.1em;
+  color: #222;
+  font-weight: 500;
+  font-size: 14px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  border-top: 2px solid transparent;
+  transition: all 220ms ease-in-out;
+  &:hover {
+    border-top: 2px solid rgb(226, 90, 42);
+  }
+`;
 
 const Link = styled(NavLink)`
     text-decoration: none;
@@ -35,10 +42,10 @@ const Link = styled(NavLink)`
 export function NavLinks(props, {to}) {
     return <NavLinksContainer>
         <LinksWrapper>
-        <LinkItem><Link to="#">About</Link></LinkItem>
-        <LinkItem><Link to="#">Explore</Link></LinkItem>
-        <LinkItem><Link to="#">Test</Link></LinkItem>
-        <LinkItem><Link to="#">Testtwo</Link></LinkItem>
+        <LinkItem><Link to={"/"}>Aboutasdfasdfas</Link></LinkItem>
+        <LinkItem><Link to={"/"}>Explore</Link></LinkItem>
+        <LinkItem><Link to={"/"}>Test</Link></LinkItem>
+        <LinkItem><Link to={"/"}>Testtwo</Link></LinkItem>
         </LinksWrapper>
     </NavLinksContainer>
 }

@@ -4,13 +4,13 @@ import PowerFlex from "../../assets/images/PowerFlex.jpg"
 
 const LogoWrapper = styled.div`
     display: flex;
-    align-items:center;
+    align-items: center;
 `
 
 const LogoImg = styled.div`
     width: 29px;
     height: 29px;
-    img: {
+    img {
         width: 100%;
         height: 100%;
     }
@@ -19,8 +19,7 @@ const LogoText = styled.h2`
     font-size: 16px;
     margin: 0;
     margin-left: 4px;
-    margin-bottom: 3px;
-    color: #222;
+    color: rgb(36,50,106);
     font-weight: 500;
 `
 
