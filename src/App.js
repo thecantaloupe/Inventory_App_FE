@@ -3,6 +3,7 @@
 // import {getAssem} from './actions/assemble'
 // import { useDispatch } from "react-redux";
 // import { useEffect } from "react";
+import { Link, Outlet } from "react-router-dom"
 import "./App.css"
 import { NavBar } from "./components/nav";
 
@@ -14,6 +15,7 @@ function App() {
   return (
     <div className="App">
       <NavBar/>
+      <Outlet />
     </div>
   );
 }

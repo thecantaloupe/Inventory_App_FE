@@ -1,8 +1,11 @@
 import React from "react";
+import { useMediaQuery } from "react-responsive";
 import styled from "styled-components";
 import { Logo } from "../logo";
 import { Accessibility } from "./accessibility";
-import { NavLinks } from "./navlinks";
+import { NavLinks } from "./navLinks";
+import { DeviceSize } from "../responsive";
+import { MobileNavLinks } from "./mobileNavLinks";
 
 const NavBarContainer = styled.div`
     width: 100%;
@@ -29,15 +32,19 @@ const RightSection = styled.div`
 `;
 
 export function NavBar(props){
+    const isMobile = useMediaQuery({ maxWidth: DeviceSize.mobile });
+    const user = false
+
     return <NavBarContainer>
         <LeftSection>
             <Logo />
         </LeftSection>
         <MiddleSection>
-            <NavLinks />
+            {!isMobile && <NavLinks />}
         </MiddleSection>
         <RightSection>
-            <Accessibility />
-        </RightSection>
+        {!isMobile && <Accessibility user={user}/>}
+        {isMobile && <MobileNavLinks user={user}/>}
+      </RightSection>
     </NavBarContainer>
 }
