@@ -49,10 +49,10 @@ export function MobileNavLinks(props, {to}) {
         <MenuToggle isOpen={isOpen} toggle={() => setOpen(!isOpen)} />
         {isOpen && <LinksWrapper>
             <Accessibility />
-            <LinkItem><Link to={"/"}>Aboutasdfasdfas</Link></LinkItem>
-            <LinkItem><Link to={"/"}>Explore</Link></LinkItem>
-            <LinkItem><Link to={"/"}>Test</Link></LinkItem>
-            <LinkItem><Link to={"/"}>Testtwo</Link></LinkItem>
+            <LinkItem><Link to={"about"}>About</Link></LinkItem>
+            <LinkItem><Link to={"warehouses"}>Warehouses</Link></LinkItem>
+            <LinkItem><Link to={"/"}>Inventory List</Link></LinkItem>
+            <LinkItem><Link to={"/"}>Pictures</Link></LinkItem>
         </LinksWrapper>}
     </NavLinksContainer>
 }
