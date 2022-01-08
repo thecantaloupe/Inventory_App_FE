@@ -3,7 +3,7 @@ import { useMediaQuery } from "react-responsive";
 import styled from "styled-components";
 import { Logo } from "../logo";
 import { Accessibility } from "./accessibility";
-import { NavLinks } from "./navLinks";
+import { Nan } from "./nan";
 import { DeviceSize } from "../responsive";
 import { MobileNavLinks } from "./mobileNavLinks";
 import { useDispatch } from "react-redux";
@@ -61,7 +61,7 @@ export function NavBar(props){
             <Logo />
         </LeftSection>
         <MiddleSection>
-            {!isMobile && <NavLinks />}
+            {!isMobile && <Nan />}
         </MiddleSection>
         <RightSection>
         {!isMobile && <Accessibility user={user} logout={logout}/>}

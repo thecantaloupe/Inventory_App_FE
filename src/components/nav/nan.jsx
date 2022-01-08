@@ -39,7 +39,7 @@ const Link = styled(NavLink)`
     font-size: inherit;
 `
 
-export function NavLinks(props, {to}) {
+export function Nan(props, {to}) {
     return <NavLinksContainer>
         <LinksWrapper>
         <LinkItem><Link to={"about"}>About</Link></LinkItem>
